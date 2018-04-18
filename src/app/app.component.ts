@@ -1,5 +1,7 @@
 import { Component } from '@angular/core';
 
+// import APIService
+
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
@@ -24,9 +26,9 @@ export class AppComponent {
   ngOnInit() {
 
     // Local Data //////////////////////////////////////////////////////////////////////
-    this.generateData();
+    //this.generateData();
     // change the data periodically
-    //setInterval(() => this.generateData(), 3000);
+    setInterval(() => this.generateData(), 3000);
     // API Data ////////////////////////////////////////////////////////////////////////
     //this._ApiService.getData().subscribe(result => { this.chartData = result })
   }
