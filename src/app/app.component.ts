@@ -1,5 +1,7 @@
 import { Component } from '@angular/core';
 
+import { ApiServiceService } from './api-service.service';
+
 // import APIService
 
 @Component({
@@ -9,7 +11,9 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'Edu\'s magic box';
-  private chartData: Array<any>;
+  private chartData;
+
+  constructor(private _ApiService: ApiServiceService) { }
 
   generateData() {
     this.chartData = [];
@@ -28,9 +32,9 @@ export class AppComponent {
     // Local Data //////////////////////////////////////////////////////////////////////
     //this.generateData();
     // change the data periodically
-    setInterval(() => this.generateData(), 3000);
+    //setInterval(() => this.generateData(), 3000);
     // API Data ////////////////////////////////////////////////////////////////////////
-    //this._ApiService.getData().subscribe(result => { this.chartData = result })
+    this._ApiService.getData().subscribe(result => { this.chartData = result })
   }
 
 
