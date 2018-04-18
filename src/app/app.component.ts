@@ -7,4 +7,29 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'app';
+  private chartData: Array<any>;
+
+  generateData() {
+    this.chartData = [];
+    for (let i = 0; i < (8 + Math.floor(Math.random() * 10)); i++) {
+      this.chartData.push([
+        `Index ${i}`,
+        Math.floor(Math.random() * 100)
+      ]);
+    }
+
+  }
+
+
+  ngOnInit() {
+
+    // Local Data //////////////////////////////////////////////////////////////////////
+    this.generateData();
+    // change the data periodically
+    //setInterval(() => this.generateData(), 3000);
+    // API Data ////////////////////////////////////////////////////////////////////////
+    //this._ApiService.getData().subscribe(result => { this.chartData = result })
+  }
+
+
 }

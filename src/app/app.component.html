@@ -7,10 +7,11 @@
 </div>
 <h2>Super gráfico: </h2>
 <ul>
-  <li>
-    <app-bar-chart>
-    </app-bar-chart>
-  </li>
+
+
+  <app-bar-chart *ngIf="chartData" [data]="chartData"></app-bar-chart>
+
+
   
 </ul>
 
