@@ -1,7 +1,9 @@
 /*
+
   The #chart id will be used to get a reference to the native element.
   The components size, colors and other attributes can be controlled with CSS.
   The default component styles are defined barchart.component.css:
+
   Credits: https://keathmilligan.net/create-a-reusable-chart-component-with-angular-and-d3-js/
 */
 
